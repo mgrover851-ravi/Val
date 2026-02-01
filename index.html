@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ff6a88, #ff99ac);
+      font-family: Arial, sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 35px;
+      border-radius: 25px;
+      text-align: center;
+      width: 320px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #555;
+      font-size: 17px;
+    }
+
+    .buttons {
+      margin-top: 25px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 30px;
+      border: none;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background: #ddd;
+      color: #666;
+      cursor: not-allowed;
+      pointer-events: none; /* ❌ NO cannot be clicked */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+    <h1>💖 Will you be my Valentine? 💖</h1>
+    <p>You already know the answer 😌</p>
+
+    <div class="buttons">
+      <button id="yes" onclick="yesClicked()">Yes 💕</button>
+      <button id="no">No 🙈</button>
+    </div>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="text-align:center;color:white;">
+          <h1>💘 YAYYYY 💘</h1>
+          <h2>You just made me the happiest ❤️</h2>
+          <p>Happy Valentine’s Day 🌹</p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
